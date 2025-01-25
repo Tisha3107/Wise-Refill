@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Wise-Refill</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="leaderboard.js" defer></script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Wise-Refill</a>
+            <ul class="nav-links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="awareness.html">AWARENESS</a></li>
+                <li><a href="impact.html">IMPACT</a></li>
+                <li><a href="leaderboard.html" class="active">LEADERBOARD</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-primary">Log in</a>
+                <a href="signup.html" class="btn btn-primary">Get started</a>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <main>
+            <section class="leaderboard-hero">
+                <div class="container1">
+                    <h1>Community Leaders</h1>
+                    <p>See who's making the biggest impact by reducing waste.</p>
+                </div>
+            </section>
+
+            <section class="container1">
+                <div class="leaderboard">
+                    <div class="leaderboard-filters">
+                        <button class="btn btn-outline active" data-filter="weekly">Weekly</button>
+                        <button class="btn btn-outline" data-filter="monthly">Monthly</button>
+                        <button class="btn btn-outline" data-filter="alltime">All Time</button>
+                    </div>
+
+                    <div class="leaderboard-table">
+                        <table id="leaderboardTable">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>User</th>
+                                    <th>Cups Saved</th>
+                                    <th>Points</th>
+                                    <th>Badges</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboardBody">
+                                <!-- Populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="call-to-action">
+                <div class="container1">
+                    <h2>Want to join the leaderboard?</h2>
+                    <p>Start using your reusable cup today and make a difference!</p>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer1">
+            <div class="container1">
+                <p>&copy; 2025 EcoCup. All rights reserved.</p>
+                <p>Follow us on <a href="#">Twitter</a>, <a href="#">Instagram</a>, and <a href="#">Facebook</a>.</p>
+            </div>
+        </footer>
+    </body>
+
+</html>

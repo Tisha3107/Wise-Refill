@@ -1,0 +1,146 @@
+<section class="pledge-section">
+    <div class="container">
+        <h1>Make Every Cup Count for the Planet</h1>
+        <p>
+            Join our community in reducing paper cup waste on campus. Track your
+            impact, earn rewards, and help create a more sustainable future.
+        </p>
+        <button class="btn-primary" id="takePledgeBtn">TAKE THE PLEDGE</button>
+        <button class="btn-outline">LEARN MORE</button>
+    </div>
+
+    <head>
+        <style>
+            /* Pledge Section Styling */
+            .pledge-section {
+                text-align: center;
+                padding: 2rem 1rem;
+                background: #f9f9f9;
+                border-radius: 8px;
+            }
+
+            .pledge-section h1 {
+                font-size: 2rem;
+                color: #2d6a4f;
+                margin-bottom: 1rem;
+            }
+
+            .pledge-section p {
+                font-size: 1.2rem;
+                color: #555;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-primary {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+                background-color: #2575fc;
+                color: #fff;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+            }
+
+            .btn-primary:hover {
+                background-color: #6a11cb;
+            }
+
+            .btn-outline {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+                color: #2575fc;
+                background: transparent;
+                border: 2px solid #2575fc;
+                border-radius: 25px;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+
+            .btn-outline:hover {
+                background-color: #2575fc;
+                color: #fff;
+            }
+
+            /* Modal Styling */
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .modal-content {
+                background: #fff;
+                padding: 2rem;
+                border-radius: 8px;
+                width: 90%;
+                max-width: 500px;
+                text-align: center;
+            }
+
+            .modal-content h2 {
+                color: #2d6a4f;
+                margin-bottom: 1rem;
+            }
+
+            .modal-content p {
+                color: #555;
+                margin-bottom: 1.5rem;
+            }
+
+            .modal-content label {
+                display: block;
+                text-align: left;
+                margin: 1rem 0 0.5rem;
+                color: #555;
+            }
+
+            .modal-content input,
+            .modal-content select {
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+            }
+
+            .modal-content .btn-primary {
+                width: 100%;
+            }
+
+            .close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <!-- Pledge Modal -->
+    <div id="pledgeModal" class="modal">
+        <div class="modal-content">
+            <form id="pledgeForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required />
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+                <label for="commitment">Your Commitment:</label>
+                <select id="commitment" required>
+                    <option value="" disabled selected>Select your pledge</option>
+                    <option value="reuse">Reuse a cup daily</option>
+                    <option value="educate">Educate others about sustainability</option>
+                    <option value="volunteer">Volunteer for eco-initiatives</option>
+                </select>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="pledge.js"></script>

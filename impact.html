@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact : Wise-Refill</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* User Questions Section */
+        .user-questions {
+            margin-top: 40px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-questions h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        form .form-group {
+            margin-bottom: 20px;
+        }
+
+        form select,
+        form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.btn-secondary {
+            background-color: #f5a623;
+            color: white;
+        }
+
+        button.btn-secondary:hover {
+            background-color: #f08416;
+        }
+
+        /* Fade-in Animation */
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .impact-tracker {
+                flex-direction: column;
+            }
+
+            .tracker-form,
+            .impact-stats {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Wise-Refill</a>
+            <ul class="nav-links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="awareness.html">AWARENESS</a></li>
+                <li><a href="impact.html" class="active">IMPACT</a></li>
+                <li><a href="leaderboard.html">LEADERBOARD</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-ghost">Log in</a>
+                <a href="signup.html" class="btn btn-primary">Get started</a>
+            </div>
+        </nav>
+    </header>
+
+    <body>
+        <a href="#main-content" class="skip-to-content">Skip to content</a>
+        <header class="header">
+            <!-- Same navigation as index.html -->
+        </header>
+
+        <main id="main-content">
+            <section class="impact-hero fade-in">
+                <div class="container">
+                    <h1>Track Your Impact</h1>
+                    <p>See how your sustainable choices make a difference</p>
+                </div>
+            </section>
+
+            <section class="container fade-in">
+                <div class="impact-tracker">
+                    <div class="tracker-form">
+                        <h2>Log Your Usage</h2>
+                        <form id="usageForm">
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cups">Reusable Cups Used</label>
+                                <input type="number" id="cups" min="0" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log Usage</button>
+                        </form>
+                    </div>
+                    <div class="impact-stats">
+                        <h2>Your Impact</h2>
+                        <div class="impact-chart">
+                            <canvas id="impactChart"></canvas>
+                        </div>
+                        <div class="impact-numbers">
+                            <div class="impact-number">
+                                <h3 id="totalCups">0</h3>
+                                <p>Cups Saved</p>
+                            </div>
+                            <div class="impact-number">
+                                <h3 id="totalCO2">0</h3>
+                                <p>kg CO2 Saved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="user-questions">
+            <h2>Tell Us About Your Usage</h2>
+            <form id="userQuestions">
+                <div class="form-group">
+                    <label for="usageFrequency">How often do you use reusable cups?</label>
+                    <select id="usageFrequency">
+                        <option value="Daily">Daily</option>
+                        <option value="FewTimesAWeek">Few times a week</option>
+                        <option value="Occasionally">Occasionally</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="impactGoal">What’s your sustainability goal?</label>
+                    <input type="text" id="impactGoal" placeholder="e.g., Save 1000 cups per year">
+                </div>
+                <button type="submit" class="btn btn-secondary">Submit</button>
+            </form>
+        </section>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="impact.js"></script>
+    </body>
+
+</html>

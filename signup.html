@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-UP - Wise-Refill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Same navigation as index.html -->
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <div class="auth-card">
+                <h1>Welcome!!</h1>
+                <p>Continue your sustainable journey</p>
+
+                <form id="loginForm" class="auth-form">
+
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" id="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">CONFIRM PASSWORD</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <center>
+                        <button type="submit" class="btn btn-primary w-full">SIGN UP</button>
+                    </center>
+                </form>
+                <center>
+                    <div class="auth-divider">
+                        <span>or continue with</span>
+                    </div>
+                </center>
+                <br>
+                <center>
+                    <div class="social-auth">
+                        <button class="btn btn-outline w-full" onclick="socialLogin('google')">
+                            Continue with Google
+                        </button><br><br>
+                        <button class="btn btn-outline w-full" onclick="socialLogin('facebook')">
+                            Continue with Facebook
+                        </button>
+                    </div>
+                </center>
+                <br>
+                <p class="auth-footer">
+                    Already have an account? <a href="login.html">Sign In</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+
+</html>
